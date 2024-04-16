@@ -1,8 +1,15 @@
 import React from 'react';
 import { Flex, Layout } from 'antd';
-import {Outlet} from "react-router-dom"
 const { Header, Footer, Sider, Content } = Layout;
+import {Outlet} from "react-router-dom";
 import MyNavBar from "/components/MyNavBar.jsx"
+
+const siderStyle = {
+    textAlign: 'center',
+    lineHeight: '120px',
+    color: '#fff',
+    backgroundColor: '#1677ff',
+  };
 
 const headerStyle = {
     textAlign: 'center',
@@ -11,7 +18,6 @@ const headerStyle = {
     paddingInline: 48,
     lineHeight: '64px',
     backgroundColor: '#4096ff',
-    flexShrink: 0,
   };
   
   const contentStyle = {
@@ -20,8 +26,6 @@ const headerStyle = {
     lineHeight: '120px',
     color: '#fff',
     backgroundColor: '#0958d9',
-    flexGrow: 1, /* Allows content to expand and fill available space */
-  overflowY: "auto", /* Adds scroll to content if overflow */
   };
   
   const footerStyle = {
@@ -30,22 +34,27 @@ const headerStyle = {
     backgroundColor: '#4096ff',
     height: 64, // Set the height for footer
     lineHeight: '64px',
-    flexShrink: 0,
   };
 
 
-export default function MainLayout(){
+export default function LeetCodeLayout(){
 
 
 
 
     return(
-        <div style={{ display: 'flex', width: '100%', height: '100vh' }}> {/* Adjusted for full viewport height */}
-      <Layout style={{ flex: 1, display: 'flex', flexDirection: 'column' }}> {/* Ensures layout is flex and column direction */}
-        <Header style={headerStyle}><MyNavBar/></Header>
-        <Content style={contentStyle}><Outlet/></Content> {/* Outlet moved inside Content */}
-        <Footer style={footerStyle}>Footer</Footer>
+        <>
+        <Layout style={{ flex: 1, overflow: 'hidden' }}>
+        <Sider width="25%" style={siderStyle}>
+          Sider
+        </Sider>
+        <Layout>
+          <Header style={headerStyle}><MyNavBar/></Header>
+          <Content style={contentStyle}>Content</Content>
+          <Footer style={footerStyle}>Footer</Footer>
+        </Layout>
       </Layout>
-    </div>
-    )
+      <Outlet/>
+      </>
+    );
 }
