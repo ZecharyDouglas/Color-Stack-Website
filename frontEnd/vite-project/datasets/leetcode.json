@@ -1,0 +1,20 @@
+{
+    "datastructures": [
+        {
+            "name": "Array",
+            "description": "An array is a collection of elements identified by index or key. The elements are stored in contiguous memory locations, which allows for fast access to elements at any position using the index.",
+            "usecase":" Used for storing data elements of the same type. It's useful when you know the size of the dataset in advance and need fast access by index."
+        },
+        {
+            "name": "LinkedList",
+            "description": "A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the sequence. This structure allows for efficient insertion and removal of elements from any position in the sequence.",
+            "usecase":"Useful when you need dynamic data storage, or when the number of data elements is unknown upfront and frequently changes."
+
+        },
+        {
+            "name":"",
+            "description":"",
+            "usecase"
+        }
+    ]
+}

@@ -49,9 +49,8 @@ export default function LeetCodeLayout(){
           Sider
         </Sider>
         <Layout>
-          <Header style={headerStyle}><MyNavBar/></Header>
           <Content style={contentStyle}>Content</Content>
-          <Footer style={footerStyle}>Footer</Footer>
+          
         </Layout>
       </Layout>
       <Outlet/>

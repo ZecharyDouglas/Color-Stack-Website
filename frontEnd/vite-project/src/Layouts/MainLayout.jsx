@@ -42,10 +42,10 @@ export default function MainLayout(){
     return(
         <div style={{ display: 'flex', width: '100%', height: '100vh' }}> {/* Adjusted for full viewport height */}
       <Layout style={{ flex: 1, display: 'flex', flexDirection: 'column' }}> {/* Ensures layout is flex and column direction */}
-        <Header style={headerStyle}><MyNavBar/></Header>
         <Content style={contentStyle}><Outlet/></Content> {/* Outlet moved inside Content */}
-        <Footer style={footerStyle}>Footer</Footer>
+        
       </Layout>
+      <Outlet/>
     </div>
     )
 }
