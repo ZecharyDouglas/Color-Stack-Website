@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+
 import {createBrowserRouter, RouterProvider, Route, createRoutesFromElements} from "react-router-dom"
 import MainLayout from "C:\\Users\\Burne\\vscode_projects\\ColorStack\\frontEnd\\vite-project\\src\\Layouts\\MainLayout.jsx"
 
